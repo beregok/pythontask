@@ -1,0 +1,5 @@
+# Redirect default Netlify subdomain to primary domain
+https://pythontask.netlify.com/* https://pythontask.pp.ua/:splat 301!
+
+# These extra rules are required because HTTPS is not forced
+http://pythontask.netlify.com/* https://pythontask.pp.ua/:splat 301!
