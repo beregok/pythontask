@@ -1,0 +1,7 @@
+---
+---
+{% assign theorys = site.posts | where: "type", "Theory" | sort: "data" | reverse %}
+
+<h2>Теоретичний матеріал, конспекти<span class="count">({{ theorys | size }})</span></h2>
+
+{% include listings.html listings=theorys %}

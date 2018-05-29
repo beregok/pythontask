@@ -1,0 +1,8 @@
+- name: Задачі
+  link: /
+- name: Розділи
+  link: /category/
+- name: Теорія
+  link: /theory/
+- name: FAQ
+  link: /faq/

@@ -1,0 +1,32 @@
+---
+faq:
+  - question: Що таке Python?
+    answer: Python («Па́йтон») — інтерпретована об'єктно-орієнтована мова програмування високого рівня з строгою динамічною типізацією. Розроблена в 1990 році Гвідо ван Россумом. Структури даних високого рівня разом із динамічною семантикою та динамічним зв'язуванням роблять її привабливою для швидкої розробки програм, а також як засіб поєднання існуючих компонентів.
+  - question: Як почати користуватися?
+    answer: Завантажити з офіційного сайту [www.python.org](https://www.python.org/) інтерпретатор Python та написати першу програму
+  - question: В якому середовищі писати програми?
+    answer:  Для початківців підходить PyCharm Community, завантажити потрібно з офіційного сайту [JetBrains](https://www.jetbrains.com/pycharm/download/)
+  - question: Про проект Pythontask?
+    answer:  На сайті предстaвлені авторські розв'яки задач на мові програмування Python.
+  - question: Яка мета проекту Pythontask?
+    answer:  Створити банк розв'язків задач на мові  Python. Надати допомогу користувачам при розв'язування задач.
+  - question: Хто є автором проекту?
+    answer:  Вчитель інформатики та математики О.В. Бережний - [Th.Beregok](http://beregok.pp.ua/).
+  - question: Я бажаю долучится до проекту
+    answer:  Долучится на можна на [GitHub](https://github.com/pythontask/pythontask.github.io).
+---
+
+<h1>FAQ</h1>
+
+<section class="faq">
+	<ul>
+		{% for item in page.faq %}
+			<li><a href="#{{ item.question | slugify }}">{{ item.question }}</a></li>
+		{% endfor %}
+	</ul>
+
+	{% for item in page.faq %}
+		<h2 id="{{ item.question | slugify}}">{{ item.question }}<a class="header-link" href="#{{ item.question | slugify }}">#</a></h2>
+		{{ item.answer | markdownify }}
+	{% endfor %}
+</section>

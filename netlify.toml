@@ -1,0 +1,6 @@
+# netlify.toml
+# This file should be at the root of your project
+#  command = "jekyll build && jekyll algolia"
+[build]
+  command = "jekyll build && jekyll algolia"
+  publish = "_site"
